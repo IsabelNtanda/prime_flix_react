@@ -24,6 +24,13 @@ display: block;
 border-top-left-radius: 8px;
 border-top-right-radius: 8px;
 }
+.loading{
+display: flex;
+justify-content:center;
+align-items: center;
+margin-top: 14px;
+
+}
 
 .lista-filmes a{
 display: flex;
