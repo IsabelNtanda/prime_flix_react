@@ -1,37 +1,36 @@
-import { useEffect, useState } from "react";
-import api from "../../services/api";
-import { Link } from "react-router-dom";
-import "./home.css";
+import { useEffect, useState } from 'react'
+import api from '../../services/api'
+import { Link } from 'react-router-dom'
+import './home.css'
 // url da api:https://api.themoviedb.org/3/movie/now_playing?api_key=8a20226013191a81fea33c6295a8e646&language=pt-BR
 
 export default function Home() {
-  const [filmes, setFilmes] = useState([]);
+  const [filmes, setFilmes] = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function loadFilmes() {
-      const response = await api.get("movie/now_playing", {
+      const { data } = await api.get('movie/now_playing', {
         params: {
-          api_key: "8a20226013191a81fea33c6295a8e646",
-          language: "pt-BR",
+          api_key: '8a20226013191a81fea33c6295a8e646',
+          language: 'pt-BR',
           page: 1,
         },
-      });
+      })
       //console.log(response.data.results.slice(0,10))
-      setFilmes(response.data.results.slice(0, 10));
+      setFilmes(data.results.slice(0, 10))
       setLoading(false)
     }
-    loadFilmes();
-  }, []);
+    loadFilmes()
+  }, [])
 
-if(loading){
-
-  return(
-    <div className="loading">
-      <h2>Carregando filmes...</h2>
-    </div>
+  if (loading) {
+    return (
+      <div className="loading">
+        <h2>Carregando filmes...</h2>
+      </div>
     )
-}
+  }
   return (
     <div className="container">
       <div className="lista-filmes">
@@ -45,9 +44,9 @@ if(loading){
               />
               <Link to={`/filme/${filme.id}`}>Acessar</Link>
             </article>
-          );
+          )
         })}
       </div> 
     </div>
-  );
+  )
 }
