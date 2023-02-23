@@ -35,7 +35,7 @@ if(loading){
   return (
     <div className="container">
       <div className="lista-filmes">
-        {filmes.map(filme => {
+        {filmes.map((filme) => {
           return (
             <article key={filme.id}>
               <strong>{filme.title}</strong>
@@ -47,7 +47,7 @@ if(loading){
             </article>
           );
         })}
-      </div>
+      </div> 
     </div>
   );
 }

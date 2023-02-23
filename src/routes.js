@@ -10,8 +10,8 @@ return(
   <Header/>
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/filmes:id" element={<Filmes />}/>
-    <Route path="*" element={<Erro/>}  />
+    <Route path="/filme/:id" element={<Filmes />}/>
+    <Route path="*" element={<Erro />}  />
   </Routes>
   </BrowserRouter>
   
