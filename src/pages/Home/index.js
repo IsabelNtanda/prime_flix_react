@@ -18,7 +18,7 @@ export default function Home() {
         },
       })
       //console.log(response.data.results.slice(0,10))
-      setFilmes(data.results.slice(0, 10))
+      setFilmes(data.results.slice(0, 12))
       setLoading(false)
     }
     loadFilmes()

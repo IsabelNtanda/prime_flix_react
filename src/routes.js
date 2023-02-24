@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Filmes from './pages/Filmes'
+import Filme from './pages/Filme'
 import Erro from './pages/Erro'
 import Header from './components/Header'
 
@@ -10,7 +10,7 @@ return(
   <Header/>
   <Routes>
     <Route path="/" element={<Home />} />
-    <Route path="/filme/:id" element={<Filmes />}/>
+    <Route path="/filme/:id" element={<Filme />}/>
     <Route path="*" element={<Erro />}  />
   </Routes>
   </BrowserRouter>
