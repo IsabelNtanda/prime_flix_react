@@ -1,20 +1,24 @@
 
 .not-found{
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 6.0rem);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 .not-found h1{
-font-size: 120px;
+font-size: 12rem;
 }
 .not-found a{
 text-decoration: none;
 background-color: #116feb;
 color: #fff;
-padding: 10px;
-margin-top: 14px;
+padding: 1rem;
+margin-top: 1.4rem;
+transition: all .4s;
+}
 
+.not-found a:hover{
+filter: brightness(1.4);
 }

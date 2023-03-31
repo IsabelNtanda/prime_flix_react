@@ -1,6 +1,6 @@
 .lista-filmes {
-  max-width: 800px;
-  margin: 14px auto;
+  max-width: 80rem;
+  margin: 1.4rem auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -8,47 +8,49 @@
 .lista-filmes article {
   width: 100%;
   background-color: #ffff;
-  padding: 15px;
-  border-radius: 4px;
+  padding: 1.5rem;
+  border-radius: .4rem;
 }
 
 .lista-filmes strong {
-  margin-bottom: 14px;
+  margin-bottom: 1.4rem;
   text-align: center;
-  font-size: 1rem;
   display: block;
   height: 8vh;
 }
 .lista-filmes img {
-  width: 900px;
+  width: 90.0rem;
   max-width: 100%;
-  max-height: 340px;
+  max-height: 34.0rem;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  border-top-left-radius: .8rem;
+  border-top-right-radius: .8rem;
 }
 .loading {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 14px;
+  margin-top: 1.4rem;
 }
 
 .lista-filmes a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
-  font-size: 24px;
+  padding: 1.0rem 0;
+  font-size: 2.4rem;
   background-color: #116feb;
   text-decoration: none;
   color: #fff;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: .8rem;
+  border-bottom-right-radius: .8rem;
+  transition: all .5s;
 }
-
-@media (max-width: 780px) {
+.lista-filmes a:hover{
+filter: brightness(1.3);
+}
+@media (max-width: 78.0rem) {
   .lista-filmes {
     grid-template-columns: 1fr;
   }
